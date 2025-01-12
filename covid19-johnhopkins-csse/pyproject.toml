@@ -1,0 +1,27 @@
+[project]
+name = "covid19_johnhopkins_csse"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.9,<3.13"
+dependencies = [
+    "dagster",
+    "dagster-cloud",
+]
+
+[project.optional-dependencies]
+dev = [
+    "dagster-webserver", 
+    "pytest",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.dagster]
+module_name = "covid19_johnhopkins_csse.definitions"
+project_name = "covid19_johnhopkins_csse"
+
+[tool.setuptools.packages.find]
+exclude=["covid19_johnhopkins_csse_tests"]
