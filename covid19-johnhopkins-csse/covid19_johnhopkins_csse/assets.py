@@ -1,15 +1,15 @@
-
-import dlt
 from dagster import AssetExecutionContext
 from dagster_embedded_elt.dlt import DagsterDltResource, dlt_assets
-from .pipeline import github_source
+from dlt import pipeline
+from dlt_sources.ccse import daily_reports
+
 
 @dlt_assets(
-    dlt_source=github_source(),
-    dlt_pipeline=dlt.pipeline(
-        pipeline_name="github_issues",
-        dataset_name="github",
-        destination="duckdb",
+    dlt_source=daily_reports(),
+    dlt_pipeline=pipeline(
+        pipeline_name="daily_reports",
+        dataset_name="daily_reports",
+        destination="postgres",
         progress="log",
     ),
     name="github",
