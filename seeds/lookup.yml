@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: lookup
+    database: "alfinrohadi"
+    schema: dagster_dbt_seeds
+    tables:
+      - name: dates
+        identifier: dimdates

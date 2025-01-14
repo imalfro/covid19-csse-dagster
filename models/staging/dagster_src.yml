@@ -1,0 +1,21 @@
+version: 1
+
+sources:
+  - name: csse
+    schema: ccse_covid19
+    tables:
+      - name: lookup
+        identifier: lookup_reference
+        meta:
+          dagster:
+            asset_key: ["dlt_extract_daily_reports_lookup_reference"]
+      - name: timeseries_us
+        identifier: timeseries_us
+        meta:
+          dagster:
+            asset_key: ["dlt_extract_timeseries_reports_timeseries_US"]
+      - name: timeseries_global
+        identifier: timeseries_global
+        meta:
+          dagster:
+            asset_key: ["dlt_extract_timeseries_reports_timeseries_global"]

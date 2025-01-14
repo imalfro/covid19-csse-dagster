@@ -1,0 +1,12 @@
+dagster==1.9.8
+dagster-webserver==1.9.8
+bs4==0.0.2
+pandas==2.2.3
+dbt-core==1.9.1
+dbt-postgres==1.9.0
+sqlalchemy>=1.4
+dlt[postgres]>=0.4.7
+dlt[parquet]>=0.4.7
+dagster-embedded-elt==0.25.8
+dagster-postgres==0.25.8
+dagster-dbt==0.25.8
